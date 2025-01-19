@@ -81,6 +81,8 @@ const PostCard = () => {
     Modal.confirm({
       title: "Gönderi silinecek!",
       content: "Bu gönderiyi silmek istediğinize emin misiniz?",
+      okText: "Sil", 
+      cancelText: "Hayır", 
       onOk: () => {
         setPosts((prev) => prev.filter((_, i) => i !== index));
         message.success("Gönderi silindi!");
@@ -92,8 +94,8 @@ const PostCard = () => {
      Modal.info({
        content: <img src={image} alt="preview" style={{ maxWidth: "100%" }} />,
        icon: null,
-       footer: null, // "Tamam" düğmesini kaldırır
-       closable: true, // Sağ üst çarpı her zaman aktif olur
+       footer: null,
+       closable: true, 
      });
    };
  

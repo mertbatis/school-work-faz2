@@ -1,5 +1,3 @@
-// src/pages/Login.tsx
-import React from "react";
 import { useNavigate } from "react-router-dom";
 import { Form, Input, Button, Typography, Row, Col, Card } from "antd";
 import { motion } from 'framer-motion';

@@ -2,14 +2,9 @@ import React, { useState } from "react";
 import { Button, Modal, Input, Upload, message, Typography, Card, DatePicker } from "antd";
 import {
   UploadOutlined,
-  LikeOutlined,
-  SaveOutlined,
-  CommentOutlined,
   UserOutlined,
   CloseCircleOutlined,
   PlusCircleOutlined,
-  UpOutlined,
-  CaretUpOutlined,
   ArrowUpOutlined,
 } from "@ant-design/icons";
 import moment from "moment";
@@ -64,7 +59,7 @@ const PostEventPage = () => {
         date: currentDateTime,
       };
       setPosts([newPostData, ...posts]);
-      closeModal(); // Close the modal and reset values
+      closeModal();
     }
   };
 
@@ -88,6 +83,8 @@ const PostEventPage = () => {
     Modal.confirm({
       title: "Gönderi silinecek!",
       content: "Bu gönderiyi silmek istediğinize emin misiniz?",
+      okText: "Sil", 
+      cancelText: "Hayır", 
       onOk: () => {
         setPosts((prev) => prev.filter((_, i) => i !== index));
         message.success("Gönderi silindi!");
@@ -99,8 +96,8 @@ const PostEventPage = () => {
     Modal.info({
       content: <img src={image} alt="preview" style={{ maxWidth: "100%" }} />,
       icon: null,
-      footer: null, // "Tamam" düğmesini kaldırır
-      closable: true, // Sağ üst çarpı her zaman aktif olur
+      footer: null, 
+      closable: true,
     });
   };
 
@@ -285,7 +282,7 @@ const PostEventPage = () => {
             placeholder="Etkinlik Tarihi Giriniz"
             style={{ width: "100%", marginBottom: "10px" }}
             onChange={(date) => setEventDate(date ? date.format("YYYY-MM-DD") : "")}
-            value={eventDate ? moment(eventDate) : null} // Reset value here
+            value={eventDate ? moment(eventDate) : null}
           />
           <Upload
             accept="image/*"

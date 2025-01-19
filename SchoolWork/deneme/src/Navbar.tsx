@@ -11,11 +11,9 @@ function Navbar() {
     navigate(path);
   };
 
-  return (
+    return (
     <>
-      {/* Header alanı için bir üst boşluk bırakmak */}
       <div style={{ height: "120px" }}></div>
-
       <Layout>
         <Header
           style={{
@@ -26,9 +24,9 @@ function Navbar() {
             backgroundColor: "#222831",
             padding: "0 20px",
             height: "120px",
-            position: "fixed", // Header'ı sabitle
-            top: 0, // Sayfanın en üstüne sabitle
-            zIndex: 5, // Header'ın diğer elementlerin önünde görünmesi için
+            position: "fixed",
+            top: 0,
+            zIndex: 5,
           }}
         >
           <div

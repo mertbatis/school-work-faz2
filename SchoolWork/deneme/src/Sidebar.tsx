@@ -1,7 +1,7 @@
-import React from 'react';
 import { Layout, Menu } from 'antd';
 import { HomeOutlined, UserOutlined, CalendarOutlined, BookOutlined, LikeOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
+import { FaSchool } from "react-icons/fa";
 
 const { Sider } = Layout;
 
@@ -25,13 +25,16 @@ const Sidebar = () => {
           <Menu.Item key="2" icon={<UserOutlined />}>
             <Link to="/login">Profilim</Link>
           </Menu.Item>
-          <Menu.Item key="3" icon={<CalendarOutlined />}>
+          <Menu.Item key="4" icon={<FaSchool/>}>
+            <Link to="/MyUni">Üniversitem</Link>
+          </Menu.Item>
+          <Menu.Item key="5" icon={<CalendarOutlined />}>
             <Link to="/events">Yaklaşan Etkinlikler</Link>
           </Menu.Item>
-          <Menu.Item key="4" icon={<BookOutlined />}>
+          <Menu.Item key="6" icon={<BookOutlined />}>
             <Link to="/saved">Kaydedilenler</Link>
           </Menu.Item>
-          <Menu.Item key="5" icon={<LikeOutlined />}>
+          <Menu.Item key="7" icon={<LikeOutlined />}>
             <Link to="/liked">Beğenilenler</Link>
           </Menu.Item>
         </Menu>

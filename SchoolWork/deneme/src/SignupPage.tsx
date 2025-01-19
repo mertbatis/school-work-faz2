@@ -1,4 +1,3 @@
-// src/pages/Signup.tsx
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { Form, Input, Button, DatePicker, Typography, Row, Col, Card } from "antd";
@@ -19,18 +18,18 @@ const SignupPage = () => {
 
   return (
      <motion.div
-                  initial="hidden"
-                  animate="visible"
-                  variants={menuVariants}
-                >
-    <Row
-      justify="center"
-      align="middle"
-      style={{
-        minHeight: "100vh",
-        backgroundColor: "#f4f4f9",
-      }}
-    >
+      initial="hidden"
+      animate="visible"
+      variants={menuVariants}
+      >
+        <Row
+          justify="center"
+          align="middle"
+          style={{
+            minHeight: "100vh",
+            backgroundColor: "#f4f4f9",
+          }}
+        >
       <Col xs={24} sm={18} md={12} lg={8}>
         <Card
           title={
